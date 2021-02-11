@@ -1,7 +1,8 @@
-import React from "react";
+import React from 'react';
+import logo from '../logo.png';
 
 class SearchBar extends React.Component {
-  state = { term: "" };
+  state = { term: '' };
 
   onInputChange = (e) => {
     this.setState({ term: e.target.value });
@@ -14,18 +15,35 @@ class SearchBar extends React.Component {
 
   render() {
     return (
-      <div className="search-bar ui segment">
-        <form onSubmit={this.onFormSubmit} className="ui form">
-          <div className="field">
-            <label>Video Search</label>
+      <form className="search-bar p-3 mb-3" onSubmit={this.onFormSubmit}>
+        <div className="form-row justify-content-center">
+          <div className="col-4">
+            <img
+              src={logo}
+              alt="icono"
+              width="40"
+              height="40"
+              className="mr-2"
+            />
+            Baby Tube
+          </div>
+          <div className="col-5">
             <input
               type="text"
+              id="input"
+              className="form-control"
+              placeholder="Search a video"
               value={this.state.term}
               onChange={this.onInputChange}
             />
           </div>
-        </form>
-      </div>
+          <div className="col-2">
+            <button type="submit" className="btn btn-danger pb-2 pl-4 pr-4">
+              Search
+            </button>
+          </div>
+        </div>
+      </form>
     );
   }
 }

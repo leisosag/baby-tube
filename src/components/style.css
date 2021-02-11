@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap');
+
+:root {
+  --primary: #fa4646;
+}
+
+body {
+  background-color: #181818;
+  color: #fff;
+  font-family: 'Nunito Sans', sans-serif;
+}
+.search-bar {
+  background-color: #202020;
+}
+.loader-container {
+  height: 80vh;
+  width: 100vw;
+}
+.loader {
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-body {
+  background-color: #202020;
+}
+.card {
+  border: none;
+  background-color: #181818;
+}
+.card-group {
+  flex-direction: column;
+}
+.video-item {
+  cursor: pointer;
+}
+.video-item img {
+  min-height: 20vh;
+}
